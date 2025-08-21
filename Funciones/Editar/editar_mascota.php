@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         background-color: #ddd;
     }
     .cliente-item.selected {
-        background-color: #007bff;
+        background-color: #63696fff;
         color: white;
         font-weight: bold;
     }
@@ -145,7 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </main>
 
-    <script> //Script para la funcion para actualizar
+    <script>
         const clientesLista = document.getElementById('lista-clientes');
         const inputClientes = document.getElementById('id_clientes_input');
 
@@ -157,14 +157,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         clientesLista.addEventListener('click', e => {
             if (e.target.classList.contains('cliente-item')) {
-                e.target.classList.toggle('selected');
+                const id = e.target.dataset.id;
+
+                if (id === "1") {
+                    // Si selecciona "Sin propietario", quitar selección de todos los demás
+                    clientesLista.querySelectorAll('.cliente-item').forEach(div => {
+                        div.classList.remove('selected');
+                    });
+                    e.target.classList.add('selected');
+                } else {
+                    // Si selecciona cualquier otro, quitar "Sin propietario"
+                    const sinPropietario = clientesLista.querySelector('.cliente-item[data-id="1"]');
+                    if (sinPropietario) {
+                        sinPropietario.classList.remove('selected');
+                    }
+                    e.target.classList.toggle('selected');
+                }
+
                 actualizarInput();
             }
         });
 
-        // Inicializa input con los seleccionados al cargar
+        // Inicializa input con seleccionados al cargar
         actualizarInput();
     </script>
+
 
 </body>
 </html>
