@@ -1,0 +1,370 @@
+/*Veterinaria*/
+/*José Pablo Chinchilla Chinchilla - Desarrollo de Software- Sección 12-4*/
+/*Styles.css*/
+
+/*General*/
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+/*Header*/
+    header {
+        background-color: #197a36; /* Verde oscuro */
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+/*Footer*/
+    footer {
+        background-color: white;
+        text-align: center;
+        padding: 5px;
+        font-size: 0.9rem;
+        border-top: 2px solid #ccc;
+        margin-top: 10px;
+    }
+
+/*Nav y menu del indice*/
+    .nav-menu {
+        width: 1;
+        display: flex;
+        flex-direction: row;  
+        flex-wrap: wrap;      
+        gap: 15px;           
+        padding: 15px;
+        justify-content: flex-start; 
+    }
+
+    .form-menu {
+        display: inline-block;  
+        margin: 0;             
+        padding: 0;
+        width: 100%;
+        max-width: 210px;
+        margin: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .form-menu button {
+        width: 210px;
+        height: 90px;
+        display: flex;
+        flex-direction: column;  /* para que icono y texto estén uno debajo del otro */
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;  /* esquinas redondeadas, pon 0 si quieres completamente cuadrado */
+        padding: 10px;
+        font-size: 1rem;
+        text-align: center;
+        white-space: normal; /* para permitir que el texto haga salto de línea */
+        }
+
+    .form-menu button:hover {
+        background-color: #197a36;
+        transform: translateY(-3px);
+    }
+
+/* Botones dentro de los formularios */
+    .form-menu button {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 12px 16px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: white;
+        background-color: #145a32;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+/* Iconos SVG en los botones */
+    .form-menu button .icon {
+        width: 36px;
+        height: 36px;
+        fill: white;
+        margin: 0;
+    }
+
+/* Hover y focus */
+    .form-menu button:hover,
+    .form-menu button:focus {
+        background-color: #197a36;
+        transform: translateY(-3px);
+        outline: none;
+    }
+
+/* Opcional: cambio de cursor y sombra para el botón activo */
+    .form-menu button:active {
+        background-color: #114d26;
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+
+/*Botones*/
+    button, .btn {
+        padding: 7px 13px;
+        border: none;
+        border-radius: 8px;
+        background-color: #1aad88;
+        color: white;
+        cursor: pointer;
+        font-size: 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    /*Iconos*/
+    .icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+
+
+    button:hover, .btn:hover {
+        background-color: #28B463;
+        transform: translateY(-2px);
+    }
+
+/* Botón eliminar*/
+    .btn-danger {
+        background-color: #C0392B !important;
+    }
+
+    .btn-danger:hover {
+        background-color: #E74C3C !important;
+    }
+
+/*Tablas*/
+    table, table th, table td {
+        background-color: white !important;
+        color: green !important;
+        border: 1px solid #ddd;
+        padding: 8px;
+        min-width: 100%;
+    }
+
+    table th {
+        background-color: #e0f7e0 !important;
+        font-weight: bold;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f9fff9 !important;
+    }
+
+    table tr:hover {
+        background-color: #d4f1d4 !important;
+    }
+
+
+/*Formularios*/
+    /*Barras de busqueda*/
+    .busqueda-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-busqueda {
+        display: flex;
+        align-items: center;
+        gap: 10px; 
+        margin-bottom: 3px;
+        margin-top: 3px;
+        flex-wrap: wrap; 
+    }
+
+    .form-busqueda input {
+        width: 600px; 
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .form-busqueda select {
+        width: 150px; 
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .form-busqueda button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 4px 0;
+        border: 1px solid #93f1e2;
+        border-radius: 20px;
+        font-size: 1rem;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        outline: none;
+        border-color: #1E8449;
+        box-shadow: 0 0 5px rgba(30,132,73,0.5);
+    }
+
+
+/*Formularios de registro*/
+    .form-registrar-container {
+        max-width: 450px;
+        margin: 40px auto 60px;
+        background: white;
+        padding: 30px 25px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+/*Título del formulario*/
+    .form-registrar-container h1 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #197a36; /* Verde oscuro */
+        font-weight: 700;
+    }
+
+/*Estilos de inputs, selects, textarea*/
+    .form-registrar-container input[type="text"],
+    .form-registrar-container input[type="number"],
+    .form-registrar-container input[type="date"],
+    .form-registrar-container input[type="time"],
+    .form-registrar-container select,
+    .form-registrar-container textarea {
+        width: 100%;
+        padding: 12px 15px;
+        margin-bottom: 20px;
+        border: 2px solid #93f1e2;
+        border-radius: 25px;
+        font-size: 1rem;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        box-sizing: border-box;
+    }
+
+    .form-registrar-container input[type="text"]:focus,
+    .form-registrar-container input[type="number"]:focus,
+    .form-registrar-container input[type="date"]:focus,
+    .form-registrar-container input[type="time"]:focus,
+    .form-registrar-container select:focus,
+    .form-registrar-container textarea:focus {
+        border-color: #1E8449;
+        box-shadow: 0 0 8px rgba(30, 132, 73, 0.6);
+        outline: none;
+    }
+
+/*Labels*/
+    .form-registrar-container label {
+        font-weight: 600;
+        color: #145A32;
+        display: block;
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+    }
+
+/*Botones*/
+    .form-registrar-container button {
+        width: 100%;
+        padding: 12px;
+        background-color: #1aad88;
+        border: none;
+        border-radius: 25px;
+        color: white;
+        font-size: 1.1rem;
+        cursor: pointer;
+        font-weight: 700;
+        box-shadow: 0 6px 12px rgba(26, 173, 136, 0.6);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .form-registrar-container button:hover {
+        background-color: #28B463;
+        transform: translateY(-3px);
+    }
+
+/*Botón cancelar*/
+    .form-registrar-container a.cancelar-btn {
+        display: block;
+        margin-top: 15px;
+        text-align: center;
+        color: #C0392B;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .form-registrar-container a.cancelar-btn:hover {
+        color: #E74C3C;
+    }
+
+/*Mensajes de error*/
+    .error-message {
+        background-color: #FDEDEC;
+        color: #C0392B;
+        border-radius: 15px;
+        padding: 12px 20px;
+        margin-top: 20px;
+        text-align: center;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(192, 57, 43, 0.3);
+    }
+
+/*Responsive*/
+    @media (max-width: 500px) {
+        .form-registrar-container {
+            margin: 20px 15px 40px;
+            padding: 20px 15px;
+        }
+    }
+
+
+/*Mensajes*/
+
+/*registrar_mascota.php*/
+    .clientes-lista {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 250px;
+    border-radius: 5px;
+    margin: 0 auto 20px auto;
+    }
+
+    .cliente-item {
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+    }
+
+    .cliente-item:hover {
+        background-color: #f0f0f0;
+    }
+
+    .cliente-item.selected {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+    }
+
+    #id_cliente {
+        padding: 5px;
+        margin-right: 10px;
+        min-width: 200px;
+    }
