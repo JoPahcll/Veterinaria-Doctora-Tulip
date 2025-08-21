@@ -123,7 +123,7 @@ if (!$detalle) {
         </style>
     </head>
     <body>
-        <h2>Diagnóstico - Revisión #<?= $detalle['id_diagnostico'] ?></h2><!--Titulo-->
+        <h2>Resultado Diagnóstico #<?= $detalle['id_diagnostico'] ?></h2><!--Titulo-->
 
         <h3>Datos del Cliente</h3><!--Datos del cliente-->
         <div class="info-row"><div class="info-label">ID Cliente</div><div class="info-value"><?= $detalle['id_cliente'] ?></div></div>
@@ -180,4 +180,5 @@ if (!$detalle) {
         <a href="exportar_txt.php?id_diagnostico=<?= $detalle['id_diagnostico'] ?>" class="btn" style="background-color: #000000ff;">Imprimir</a>
 
     </body>
+
 </html>
