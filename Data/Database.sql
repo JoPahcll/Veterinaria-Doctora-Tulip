@@ -1,6 +1,12 @@
+--Veterinaria
+--José Pablo Chinchilla Chinchilla - Desarrollo de Software- Sección 12-4
+--Database.sql
+
+--Crea la base de datos
 CREATE DATABASE IF NOT EXISTS Veterinaria;
 USE Veterinaria;
 
+--Crea la tabla clientes
 CREATE TABLE clientes (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
     cedula VARCHAR(20) NOT NULL UNIQUE,
@@ -10,6 +16,7 @@ CREATE TABLE clientes (
     correo VARCHAR(100) NOT NULL
 );
 
+--Crea la tabla mascotas
 CREATE TABLE mascotas (
     id_mascota INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
@@ -19,6 +26,7 @@ CREATE TABLE mascotas (
     sexo ENUM('Macho', 'Hembra') NOT NULL
 );
 
+--Crea la tabla visitas
 CREATE TABLE visitas (
     id_visita INT AUTO_INCREMENT PRIMARY KEY,
     fecha_asignada DATE NOT NULL,
@@ -31,6 +39,7 @@ CREATE TABLE visitas (
     estado ENUM('Vigente', 'Concluida', 'Caducada') NOT NULL DEFAULT 'Vigente';
 );
 
+--Crea la tabla mascotas_clientes
 CREATE TABLE mascotas_clientes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_mascota INT NOT NULL,
@@ -39,6 +48,7 @@ CREATE TABLE mascotas_clientes (
     FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente) ON DELETE CASCADE
 );
 
+--Crea la tabla diagnostico
 CREATE TABLE diagnostico (
     id_diagnostico INT AUTO_INCREMENT PRIMARY KEY,
     id_visita INT NOT NULL,
@@ -51,5 +61,6 @@ CREATE TABLE diagnostico (
     FOREIGN KEY (id_visita) REFERENCES visitas(id_visita) ON DELETE CASCADE,
 );
 
+--Insertar un cliente falso para registrar una mascota sin dueño
 INSERT INTO clientes(Nombre, Apellido, Cédula, Correo, Telefono)
 VALUES ('Sin propietario', 'N/A', 'N/A','N/A', 'N/A');
