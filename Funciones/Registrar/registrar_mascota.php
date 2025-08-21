@@ -106,6 +106,30 @@ $clientes = $stmtClientes->fetchAll(PDO::FETCH_ASSOC);
                         </option>
                     <?php endforeach; ?>
                 </select>
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const select = document.getElementById("id_clientes");
+
+                        select.addEventListener("change", () => {
+                            const selectedValues = Array.from(select.selectedOptions).map(opt => opt.value);
+
+                            if (selectedValues.includes("1")) {
+                                // Si se selecciona el cliente con id=1, deseleccionamos los demás
+                                Array.from(select.options).forEach(opt => {
+                                    if (opt.value !== "1") {
+                                        opt.selected = false;
+                                    }
+                                });
+                            } else {
+                                // Si se selecciona cualquier otro, deseleccionamos "Sin propietario"
+                                const sinPropietario = select.querySelector("option[value='1']");
+                                if (sinPropietario) {
+                                    sinPropietario.selected = false;
+                                }
+                            }
+                        });
+                    });
+                </script>
 
                 <button type="submit">Registrar</button>
             </form>
