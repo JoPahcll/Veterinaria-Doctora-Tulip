@@ -1,13 +1,6 @@
---Veterinaria
---José Pablo Chinchilla Chinchilla - Desarrollo de Software- Sección 12-4
---Database.sql
-
-
---Crea la base de datos
 CREATE DATABASE IF NOT EXISTS Veterinaria;
 USE Veterinaria;
 
---Crea la tabla clientes (Fuerte)
 CREATE TABLE clientes (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
     cedula VARCHAR(20) NOT NULL UNIQUE,
@@ -17,7 +10,6 @@ CREATE TABLE clientes (
     correo VARCHAR(100) NOT NULL
 );
 
---Crea la tabla mascotas (Debíl)
 CREATE TABLE mascotas (
     id_mascota INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
@@ -27,7 +19,6 @@ CREATE TABLE mascotas (
     sexo ENUM('Macho', 'Hembra') NOT NULL
 );
 
---Crea la tabla visitas (Debíl)
 CREATE TABLE visitas (
     id_visita INT AUTO_INCREMENT PRIMARY KEY,
     fecha_asignada DATE NOT NULL,
@@ -40,7 +31,6 @@ CREATE TABLE visitas (
     estado ENUM('Vigente', 'Concluida', 'Caducada') NOT NULL DEFAULT 'Vigente';
 );
 
---Crea la tabla mascotas_clientes (Para la relación entre las mascotas y los clientes)
 CREATE TABLE mascotas_clientes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_mascota INT NOT NULL,
@@ -49,7 +39,6 @@ CREATE TABLE mascotas_clientes (
     FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente) ON DELETE CASCADE
 );
 
---Crea la tabla diagnostico (Datos del diagnóstico, si, la tabla no lleva tilde, por si acaso)
 CREATE TABLE diagnostico (
     id_diagnostico INT AUTO_INCREMENT PRIMARY KEY,
     id_visita INT NOT NULL,
