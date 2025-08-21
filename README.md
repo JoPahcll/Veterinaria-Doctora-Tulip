@@ -87,18 +87,15 @@ Opcional:
 
 ### Instalación y activación:
 
-- Abrí es explorador de  archivos, descomprimir el archivo .zip **Veterinaria-Prueba Técnica**
+- Buscar en el repositorio el Installer de xampp, llamado: **xampp-windows-x64-8.2.12-0-VS16-installer**.
 
-- Buscar en la raíz el Installer de xampp, llamado: **xampp-windows-x64-8.2.12-0-VS16-installer**
-
-- Instalar **xampp** usando el installer guardado en la carpeta Prueba Técnica.
+- Instalar **xampp** usando el installer.
 
 - Seguir las instrucciones del installer, especificar la creación de la carpeta xampp en el **disco local**, solicitar el servicio de **Apache** y **MySQL**, o todos los servicios si es deseado.
 
-- Una vez terminado el proceso de instalación, activar **MySQL** desde **XAMPP Control Panel**.
+- Una vez terminado el proceso de instalación, activar **MySQL** y **Apache** desde **XAMPP Control Panel**.
 
-- Mover o copiar la carpeta **Veterinaria** en la carpeta **Veterinaria-Prueba Técnica** hacia la carpeta **htdocs**, dentro de la carpeta **xampp** en el **disco local**.
-Esta deberia ser la ruta: **Disco local(C:)/xampp/htdocs/Veterinaria**
+- Crear una carpeta para insertar los archivos en el htdocs, el nombre de la carpeta puede ser **Veterinaria** por ejemplo. Esta deberia ser la ruta: **Disco local(C:)/xampp/htdocs/Veterinaria**.
 
 <br>
 
@@ -118,7 +115,7 @@ Esta deberia ser la ruta: **Disco local(C:)/xampp/htdocs/Veterinaria**
 
 ### Ingreso:
 
-Para ingresar a la página, utilizar este enlace **http://localhost/Veterinaria/login.php**, el sistema solicitara dos datos, **Usuario** y **Contraseña**
+Para ingresar a la página, utilizar este enlace si se guardo la carpeta como **Veterinaria**: **http://localhost/Veterinaria/login.php**, el sistema solicitara dos datos, **Usuario** y **Contraseña**
 
 - Usuario: 'Admin'
 - Contraseño: '12345678'
@@ -153,7 +150,7 @@ Para ingresar a la página, utilizar este enlace **http://localhost/Veterinaria/
 
 - En esta área se encuentra la lista de mascotas, con una barra de búsqueda para filtrar por diferentes tipos de datos, la lista muestra: **id de la mascota, nombre, especie, raza, edad, sexo y nombre del dueño(Dueños)**  además de tres botones por fila: **Editar**, **Historial** y **Eliminar**. 
 
-- En el menú superior existe un botón para registrar una nueva mascota (**Registrar**), los datos requeridos son: **Nombre, especie, raza, edad, sexo y dueño o múltiples dueños**, para este se debe mantener presionada la tecla **Ctrl** o **Shift + Clic** izquierdo al nombre del cliente registrado. 
+- En el menú superior existe un botón para registrar una nueva mascota (**Registrar**), los datos requeridos son: **Nombre, especie, raza, edad, sexo y dueño o múltiples dueños**, para este se debe mantener presionada la tecla **Ctrl** o **Shift + Clic** izquierdo al nombre del cliente registrado, es posible registrar una mascota sin dueño mediante la opción **Sin propietario**, que aparece entre las opciones. 
 
 - Es posible editar los datos de la mascota tras registrarla, usando el botón **Editar** en la tabla, te permitirá alterar los datos antes mencionados. 
 
@@ -177,7 +174,7 @@ Para ingresar a la página, utilizar este enlace **http://localhost/Veterinaria/
 
 <br>
 
-- Nota adicional, el botón **Mostrar todo**, muestra todas las filas sin flitro, en todas las listas
+- Nota adicional, el botón **Mostrar todo**, muestra todas las filas sin flitro, en todas las listas.
 
 <br>
 
