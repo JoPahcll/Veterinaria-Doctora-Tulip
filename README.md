@@ -87,7 +87,7 @@ Opcional:
 
 ### Instalación y activación:
 
-- Buscar en el repositorio el Installer de xampp, llamado: **xampp-windows-x64-8.2.12-0-VS16-installer**.
+- Descarga el instalador de xampp si este no esta en el dispositivo: [https://www.apachefriends.org/es/download.html].
 
 - Instalar **xampp** usando el installer.
 
