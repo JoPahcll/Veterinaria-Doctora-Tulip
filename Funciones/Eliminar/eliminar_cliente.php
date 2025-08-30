@@ -4,7 +4,7 @@
 //eliminar_cliente.php
 
 require_once __DIR__ . '/../../Conexion.php';
-require_once __DIR__ . '/../../clases/Cliente.php'; // Corrige mayúscula si tu sistema es case-sensitive
+require_once __DIR__ . '/../../clases/Cliente.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'] ?? null;
@@ -30,3 +30,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 header("Location: ../Listar/listar_clientes.php?mensaje=eliminado");
 exit;
+
