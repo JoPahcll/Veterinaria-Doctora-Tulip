@@ -4,9 +4,9 @@
 
 session_start();
 
-// Conexión a base de datos (ajusta según tu configuración)
+// Conexión a base de datos (Alterada)
 $host = 'localhost';
-$db   = 'Veterinaria';
+$db   = 'sttinternacional_Veterinaria1';
 $user = 'root';
 $pass = '';
 $charset = 'utf8mb4';
@@ -133,3 +133,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </body>
 </html>
+
