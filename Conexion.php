@@ -5,7 +5,7 @@
 
 // Conexión con la base de datos
 const DB_HOST = 'localhost';
-const DB_NAME = 'veterinaria';
+const DB_NAME = 'sttinternacional_Veterinaria1';
 const DB_USER = 'root';
 const DB_PASS = '';
 const DB_CHARSET = 'utf8mb4';
@@ -26,3 +26,4 @@ try {
     die("Error de conexión a la base de datos: " . $e->getMessage());
 }
 ?>
+
