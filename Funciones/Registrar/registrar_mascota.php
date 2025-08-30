@@ -4,16 +4,8 @@
 //registrar_mascota.php
 
 // Conexión PDO
-$dsn = "mysql:host=localhost;dbname=sttinternacional_Veterinaria1;charset=utf8mb4";
-$usuario = "root";
-$pass = "";
-
-try {//Control de errores
-    $pdo = new PDO($dsn, $usuario, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Error de conexión: " . $e->getMessage());
-}
+require_once __DIR__ . '/../../Conexion.php';
+require_once __DIR__ . '/../../clases/Visita.php';
 
 $msg = '';
 
@@ -143,4 +135,5 @@ $clientes = $stmtClientes->fetchAll(PDO::FETCH_ASSOC);
     </footer>
 </body>
 </html>
+
 
