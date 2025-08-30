@@ -3,8 +3,8 @@
 --Database.sql
 
 --Crea la base de datos
-CREATE DATABASE IF NOT EXISTS Veterinaria;
-USE Veterinaria;
+CREATE DATABASE IF NOT EXISTS sttinternacional_Veterinaria1;
+USE sttinternacional_Veterinaria1;
 
 --Crea la tabla clientes
 CREATE TABLE clientes (
@@ -64,3 +64,4 @@ CREATE TABLE diagnostico (
 --Insertar un cliente falso para registrar una mascota sin dueño
 INSERT INTO clientes(Nombre, Apellido, Cédula, Correo, Telefono)
 VALUES ('Sin propietario', 'N/A', 'N/A','N/A', 'N/A');
+
