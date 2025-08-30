@@ -4,7 +4,7 @@
 //registrar_mascota.php
 
 // Conexión PDO
-$dsn = "mysql:host=localhost;dbname=veterinaria;charset=utf8mb4";
+$dsn = "mysql:host=localhost;dbname=sttinternacional_Veterinaria1;charset=utf8mb4";
 $usuario = "root";
 $pass = "";
 
@@ -143,3 +143,4 @@ $clientes = $stmtClientes->fetchAll(PDO::FETCH_ASSOC);
     </footer>
 </body>
 </html>
+
