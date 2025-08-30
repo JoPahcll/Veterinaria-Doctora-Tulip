@@ -5,7 +5,7 @@
 
 // Conexión PDO
 require_once __DIR__ . '/../../Conexion.php';
-require_once __DIR__ . '/../../clases/Visita.php';
+require_once __DIR__ . '/../../clases/Mascota.php';
 
 $msg = '';
 
@@ -135,5 +135,6 @@ $clientes = $stmtClientes->fetchAll(PDO::FETCH_ASSOC);
     </footer>
 </body>
 </html>
+
 
 
