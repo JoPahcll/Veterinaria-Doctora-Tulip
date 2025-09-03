@@ -4,8 +4,8 @@
 
 
 --Crea la base de datos
-CREATE DATABASE IF NOT EXISTS Veterinaria;
-USE Veterinaria;
+CREATE DATABASE IF NOT EXISTS sttinternacional_Veterinaria1;
+USE sttinternacional_Veterinaria1;
 
 --Crea la tabla clientes (Fuerte)
 CREATE TABLE clientes (
@@ -61,3 +61,4 @@ CREATE TABLE diagnostico (
     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_visita) REFERENCES visitas(id_visita) ON DELETE CASCADE
 );
+
