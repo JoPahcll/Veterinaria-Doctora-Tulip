@@ -13,8 +13,8 @@ CREATE TABLE clientes (
     cedula VARCHAR(20) NOT NULL UNIQUE,
     nombre VARCHAR(50) NOT NULL,
     apellido VARCHAR(50) NOT NULL,
-    telefono VARCHAR(20) NOT NULL,
-    correo VARCHAR(100) NOT NULL
+    telefono VARCHAR(20) NOT NULL UNIQUE,
+    correo VARCHAR(100) NOT NULL UNIQUE
 );
 
 --Crea la tabla mascotas (Debíl)
@@ -61,4 +61,5 @@ CREATE TABLE diagnostico (
     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_visita) REFERENCES visitas(id_visita) ON DELETE CASCADE
 );
+
 
