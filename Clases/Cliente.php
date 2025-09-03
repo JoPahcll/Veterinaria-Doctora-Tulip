@@ -56,7 +56,7 @@ class Cliente {
             return false;
         } catch (PDOException $e) {
             if ($e->getCode() == 23000) {
-                return "Error: Ya existe un cliente con esa cédula.";
+                return "Datos repetidos, por favor inserte datos validos";
             }
             return "Error en el registro: " . $e->getMessage();
         }
@@ -150,3 +150,4 @@ class Cliente {
 
 }
 ?>
+
